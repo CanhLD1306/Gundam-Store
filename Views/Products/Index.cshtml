@@ -1,0 +1,90 @@
+﻿@model IEnumerable<GundamStore.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Product</h1>
+<a class="btn mb-1 btn-primary" asp-controller="Products" asp-action="Create" role="button">Add</a>
+<table class="table border text-nowrap customize-table mb-0 align-middle">
+    <thead class="text-dark fs-4">
+        <tr>
+            <th><h6 class="fs-4 fw-semibold mb-0">Name</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0">Description</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0">Category</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0">Size</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0">Price</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0">Discount</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0">Stock</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0">Active</h6></th>
+            <th><h6 class="fs-4 fw-semibold mb-0"></h6></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <div class="d-flex align-items-center">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                    
+                </div>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                     @Html.DisplayFor(modelItem => item.Category.Name)
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                    @Html.DisplayFor(modelItem => item.Size.Name)
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                    @Html.DisplayFor(modelItem => item.Price)
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                    @Html.DisplayFor(modelItem => item.Discount)
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                    @Html.DisplayFor(modelItem => item.Active)
+                </div>
+            </td>
+            <td>
+            <td>
+                <div class="dropdown dropstart">
+                    <a href="#" class="text-muted" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ti ti-dots-vertical fs-6"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3" asp-action="Edit" asp-route-id="@item.Id"><i class="fs-4 ti ti-plus"></i>Add</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3" asp-action="Details" asp-route-id="@item.Id"><i class="fs-4 ti ti-edit"></i>Edit</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3" asp-action="Delete" asp-route-id="@item.Id"><i class="fs-4 ti ti-trash"></i>Delete</a>
+                    </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
