@@ -22,49 +22,40 @@ namespace GundamStore.Controllers
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-              return _context.Categories != null ? 
-                          View(await _context.Categories.ToListAsync()) :
-                          Problem("Entity set 'GundamStoreDBContext.Categories'  is null.");
-        }
-
-        // GET: Categories/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Categories == null)
+            if (_context.Categories != null)
             {
-                return NotFound();
-            }
+                var categories = await _context.Categories
+                                            .Where(c => c.DeleteFlag == false) // Filter banners with deleteFlag set to false
+                                            .ToListAsync();
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (category == null)
+                return View(categories);
+            }
+            else
             {
-                return NotFound();
+                return Problem("Entity set 'GundamStoreDBContext.Banners' is null.");
             }
-
-            return View(category);
-        }
-
-        // GET: Categories/Create
-        public IActionResult Create()
-        {
-            return View();
         }
 
         // POST: Categories/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,CreateAt,CreateBy,UpdateAt,UpdateBy,DeleteFlag")] Category category)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description")] Category category)
         {
             if (ModelState.IsValid)
             {
+                category.CreateAt = DateTime.Now;
+                category.UpdateAt = DateTime.Now;
+                
+                // category.CreateBy = GetCurrentUser();
+                // category.UpdateBy = GetCurrentUser();
+                
+                category.DeleteFlag = false;
+                
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return NoContent();
         }
 
         // GET: Categories/Edit/5
@@ -75,21 +66,47 @@ namespace GundamStore.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
+            var category = _context.Categories.FirstOrDefault(c => c.Id == id);
+
             if (category == null)
             {
-                return NotFound();
+                return NotFound(); // Or return appropriate error response
             }
-            return View(category);
+
+            return Json(category);
+        }
+
+
+        private async Task<IActionResult> UpdateCategory(Category category)
+        {
+            try
+            {
+                category.UpdateAt = DateTime.Now;
+                //category.UpdateBy = GetCurrentUser();
+
+                _context.Update(category);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CategoryExists(category.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: Categories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,CreateAt,CreateBy,UpdateAt,UpdateBy,DeleteFlag")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] Category category)
         {
+            
             if (id != category.Id)
             {
                 return NotFound();
@@ -97,67 +114,39 @@ namespace GundamStore.Controllers
 
             if (ModelState.IsValid)
             {
-                try
+                var existingCategory = await _context.Categories.FindAsync(id);
+                if (existingCategory == null)
                 {
-                    _context.Update(category);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CategoryExists(category.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+
+                existingCategory.Name = category.Name;
+                existingCategory.Description = category.Description;
+
+                await UpdateCategory(existingCategory);
             }
-            return View(category);
+            return NoContent();
         }
 
-        // GET: Categories/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (id == null || _context.Categories == null)
-            {
-                return NotFound();
-            }
-
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var category = await _context.Categories.FindAsync(id);
             if (category == null)
             {
                 return NotFound();
             }
 
-            return View(category);
-        }
-
-        // POST: Categories/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Categories == null)
-            {
-                return Problem("Entity set 'GundamStoreDBContext.Categories'  is null.");
-            }
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
-            {
-                _context.Categories.Remove(category);
-            }
+            category.DeleteFlag = true;
             
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            await UpdateCategory(category);
+            return NoContent();
         }
+    
 
         private bool CategoryExists(int id)
         {
-          return (_context.Categories?.Any(e => e.Id == id)).GetValueOrDefault();
+            return _context.Categories.Any(e => e.Id == id);
         }
     }
 }

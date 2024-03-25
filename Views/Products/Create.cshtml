@@ -14,14 +14,6 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeId" class="control-label"></label>
-                <select asp-for="SizeId" class ="form-control" asp-items="ViewBag.SizeId"></select>
-            </div>
-            <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
@@ -30,6 +22,14 @@
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <select asp-for="Category" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Size" class="control-label"></label>
+                <select asp-for="Size" class ="form-control" asp-items="ViewBag.SizeId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
@@ -45,36 +45,6 @@
                 <label asp-for="Stock" class="control-label"></label>
                 <input asp-for="Stock" class="form-control" />
                 <span asp-validation-for="Stock" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreateAt" class="control-label"></label>
-                <input asp-for="CreateAt" class="form-control" />
-                <span asp-validation-for="CreateAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreateBy" class="control-label"></label>
-                <input asp-for="CreateBy" class="form-control" />
-                <span asp-validation-for="CreateBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdateAt" class="control-label"></label>
-                <input asp-for="UpdateAt" class="form-control" />
-                <span asp-validation-for="UpdateAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdateBy" class="control-label"></label>
-                <input asp-for="UpdateBy" class="form-control" />
-                <span asp-validation-for="UpdateBy" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="DeleteFlag" /> @Html.DisplayNameFor(model => model.DeleteFlag)
-                </label>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

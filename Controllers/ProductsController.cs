@@ -22,7 +22,9 @@ namespace GundamStore.Controllers
         // GET: Products
         public async Task<IActionResult> Index()
         {
+
             var gundamStoreDBContext = _context.Products.Include(p => p.Category).Include(p => p.Size);
+
             return View(await gundamStoreDBContext.ToListAsync());
         }
 

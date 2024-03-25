@@ -22,49 +22,40 @@ namespace GundamStore.Controllers
         // GET: Sizes
         public async Task<IActionResult> Index()
         {
-              return _context.Sizes != null ? 
-                          View(await _context.Sizes.ToListAsync()) :
-                          Problem("Entity set 'GundamStoreDBContext.Sizes'  is null.");
-        }
-
-        // GET: Sizes/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Sizes == null)
+            if (_context.Sizes != null)
             {
-                return NotFound();
-            }
+                var sizes = await _context.Sizes
+                                            .Where(s => s.DeleteFlag == false)
+                                            .ToListAsync();
 
-            var size = await _context.Sizes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (size == null)
+                return View(sizes);
+            }
+            else
             {
-                return NotFound();
+                return Problem("Entity set 'GundamStoreDBContext.Banners' is null.");
             }
-
-            return View(size);
-        }
-
-        // GET: Sizes/Create
-        public IActionResult Create()
-        {
-            return View();
         }
 
         // POST: Sizes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CreateAt,CreateBy,UpdateAt,UpdateBy,DeleteFlag")] Size size)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Size size)
         {
             if (ModelState.IsValid)
             {
+                size.CreateAt = DateTime.Now;
+                size.UpdateAt = DateTime.Now;
+                
+                // Size.CreateBy = GetCurrentUser();
+                // Size.UpdateBy = GetCurrentUser();
+                
+                size.DeleteFlag = false;
+                
                 _context.Add(size);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(size);
+            return NoContent();
         }
 
         // GET: Sizes/Edit/5
@@ -75,21 +66,47 @@ namespace GundamStore.Controllers
                 return NotFound();
             }
 
-            var size = await _context.Sizes.FindAsync(id);
+            var size = _context.Sizes.FirstOrDefault(c => c.Id == id);
+
             if (size == null)
             {
-                return NotFound();
+                return NotFound(); // Or return appropriate error response
             }
-            return View(size);
+
+            return Json(size);
         }
 
-        // POST: Sizes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+        private async Task<IActionResult> UpdateSize(Size size)
+        {
+            try
+            {
+                size.UpdateAt = DateTime.Now;
+                //size.UpdateBy = GetCurrentUser();
+
+                _context.Update(size);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!SizeExists(size.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        
+        // POST: Categories/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CreateAt,CreateBy,UpdateAt,UpdateBy,DeleteFlag")] Size size)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Size size)
         {
+            
             if (id != size.Id)
             {
                 return NotFound();
@@ -97,64 +114,33 @@ namespace GundamStore.Controllers
 
             if (ModelState.IsValid)
             {
-                try
+                var existingSize = await _context.Sizes.FindAsync(id);
+                if (existingSize == null)
                 {
-                    _context.Update(size);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SizeExists(size.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+
+                existingSize.Name = size.Name;
+
+                await UpdateSize(existingSize);
             }
-            return View(size);
+            return NoContent();
         }
 
-        // GET: Sizes/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (id == null || _context.Sizes == null)
-            {
-                return NotFound();
-            }
-
-            var size = await _context.Sizes
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var size = await _context.Sizes.FindAsync(id);
             if (size == null)
             {
                 return NotFound();
             }
 
-            return View(size);
-        }
-
-        // POST: Sizes/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Sizes == null)
-            {
-                return Problem("Entity set 'GundamStoreDBContext.Sizes'  is null.");
-            }
-            var size = await _context.Sizes.FindAsync(id);
-            if (size != null)
-            {
-                _context.Sizes.Remove(size);
-            }
+            size.DeleteFlag = true;
             
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            await UpdateSize(size);
+            return NoContent();
         }
-
         private bool SizeExists(int id)
         {
           return (_context.Sizes?.Any(e => e.Id == id)).GetValueOrDefault();

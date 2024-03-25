@@ -3,48 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Canhl\\Project\\GundamStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\controllers\\bannerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:controllers\\bannerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\gundamstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:gundamstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\controllers\\bannerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:controllers\\bannerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\controllers\\sizescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:controllers\\sizescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|c:\\users\\canhl\\project\\gundamstore\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2363B23-EA1A-47A5-9CE5-EA6DD0A4A49F}|GundamStore.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,136 +34,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Products\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Products\\Index.cshtml",
-              "RelativeToolTip": "Views\\Products\\Index.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADQAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T04:10:55.837Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T04:04:49.222Z"
+              "Title": "GundamStore.csproj",
+              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\GundamStore.csproj",
+              "RelativeDocumentMoniker": "GundamStore.csproj",
+              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\GundamStore.csproj",
+              "RelativeToolTip": "GundamStore.csproj",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-24T02:41:49.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAzwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T03:37:50.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T03:06:29.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T01:50:22.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T01:50:04.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAPUBAAAAAAAAAAAAwP8BAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T01:31:14.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAzwBcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T03:49:53.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SizesController.cs",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\SizesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SizesController.cs",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\SizesController.cs",
-              "RelativeToolTip": "Controllers\\SizesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T03:41:16.915Z"
+              "WhenOpened": "2024-03-20T04:16:03.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "BannersController.cs",
               "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\BannersController.cs",
               "RelativeDocumentMoniker": "Controllers\\BannersController.cs",
               "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\BannersController.cs",
               "RelativeToolTip": "Controllers\\BannersController.cs",
-              "ViewState": "AQIAAI4AAAAAAAAAAAAuwAAAAAAAAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAwwEwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T03:44:21.291Z"
+              "WhenOpened": "2024-03-20T04:13:51.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T01:37:51.628Z"
+              "DocumentIndex": 3,
+              "Title": "SizesController.cs",
+              "DocumentMoniker": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\SizesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SizesController.cs",
+              "ToolTip": "C:\\Users\\Canhl\\Project\\GundamStore\\Controllers\\SizesController.cs",
+              "RelativeToolTip": "Controllers\\SizesController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwAgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T04:09:18.849Z"
             }
           ]
         }
